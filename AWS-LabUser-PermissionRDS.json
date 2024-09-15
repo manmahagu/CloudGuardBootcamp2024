@@ -102,20 +102,6 @@
 			]
 		},
 		{
-			"Sid": "rdsinstancerestriction",
-			"Effect": "Deny",
-			"Action": "rds:CreateDBInstance",
-			"Resource": "*",
-			"Condition": {
-				"ForAnyValue:StringNotLike": {
-					"rds:DatabaseClass": [
-						"db.*.large",
-						"db.*.xlarge"
-					]
-				}
-			}
-		},
-		{
 			"Sid": "iamdeny",
 			"Effect": "Deny",
 			"Action": [
